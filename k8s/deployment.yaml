@@ -13,7 +13,7 @@ spec:
         app: cok
     spec:
       containers:
-      - image: okteto.dev/myu:latest
+      - image: okteto.dev/cok:latest
         name: cok
         ports:
         - containerPort: 8080
