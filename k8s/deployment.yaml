@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cok
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cok
+  template:
+    metadata:
+      labels:
+        app: cok
+    spec:
+      containers:
+      - image: okteto.dev/myu:latest
+        name: cok
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PORT
+          value: "8080"
+        - name: Site
+          value: "https://github.com/happyevero/Html/raw/main/S-html.zip"
+        - name: Vless_UUID
+          value: "f87bf98d-28b6-4c06-8eae-5c5cca5a79bd"
+        - name: Vless_Path
+          value: "/xderttyguhjkety"
+        - name: Vmess_UUID
+          value: "f87bf98d-28b6-4c06-8eae-5c5cca5a79bd"
+        - name: Vmess_Path
+          value: "/ytefhzvchoitrdg"
+        - name: Share_Path
+          value: "/v2link"
